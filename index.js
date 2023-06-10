@@ -9,6 +9,9 @@ const { JSDOM } = await import('jsdom')
 log('info', 'Imported JSDOM'.green)
 log('info', `Finished importing packages in ${new Date() - importPackagesTime}ms.`.green)
 
+await import('dotenv/config')
+log('info', 'Imported credentials from .env')
+
 log('info', 'Imporing bot modules...'.yellow)
 const importModulesTime = new Date()
 const { doBuy } = await import('./modules/buy.js')
@@ -22,7 +25,7 @@ log('info', `Finished importing bot modules! Took ${new Date() - importModulesTi
 
 log('info', 'Starting the browser...'.yellow)
 const browser = await puppeteer.launch({ headless: headless })
-log('info', 'Opening a new page...'.yellow)
+log('info', 'Using the already opened tab...'.yellow)
 const page = (await browser.pages())[0]
 log('info', `Going to ${rootURL}...`.yellow)
 
