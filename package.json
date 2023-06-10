@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "jsdom": "^19.0.0",
+    "puppeteer": "^13.5.0",
+    "winston": "^2.4.5"
+  },
+  "type": "module"
+}
