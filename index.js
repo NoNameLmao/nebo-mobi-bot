@@ -9,9 +9,6 @@ const { JSDOM } = await import('jsdom')
 log('info', 'Imported JSDOM'.green)
 log('info', `Finished importing packages in ${new Date() - importPackagesTime}ms.`.green)
 
-await import('dotenv/config')
-log('info', 'Imported credentials from .env')
-
 log('info', 'Imporing bot modules...'.yellow)
 const importModulesTime = new Date()
 const { doBuy } = await import('./modules/buy.js')
