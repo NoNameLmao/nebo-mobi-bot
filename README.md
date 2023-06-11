@@ -1,5 +1,8 @@
 # nebo-mobi-bot
 
+| [English Readme](README_EN.md) |
+|--------------------------------|
+
 Простой бот для браузерной игры [nebo.mobi](https://nebo.mobi), написанный на Node.js.
 
 ## Что умеет делать?
